@@ -15,10 +15,11 @@ public interface Session<E> {
 
     //Object getS(Class theClass, String name);
 
-    void update(Object object);
+    Object update(Class theClass, String SET, String valueSET, String WHERE, String valueWHERE);
     void delete(Object object);
     boolean isUserRegistered(Class class1, User user);
     List<Object> findAll(Class theClass);
     List<Object> findAll(Class theClass, HashMap params);
+    Object getByUsername(Class theClass, String username);
     List<Object> query(String query, Class theClass, HashMap params);
 }
